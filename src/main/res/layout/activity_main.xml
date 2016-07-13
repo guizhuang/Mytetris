@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/snow">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="6">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="4"
+            >
+            <TextView
+                android:id="@+id/score"
+                android:textSize="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="当前分数：" />
+            <TextView
+                android:id="@+id/maxScore"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
+
+                android:text="最高分数："
+                android:textSize="20dp"/>
+        </LinearLayout>
+
+        <com.example.tetris.ShowNextBlockView
+            android:id="@+id/nextBlockView"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="25">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            >
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.5"
+                android:id="@+id/tiger"
+                android:background="@drawable/tiger"
+
+                />
+
+            <ProgressBar
+                android:layout_width="10dp"
+                android:minWidth="5dp"
+                android:layout_height="0dp"
+                android:layout_weight="5.5"
+                android:id="@+id/progressBar"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:progressDrawable="@drawable/my_progress_bar"
+                android:max="100"
+                android:progress="100"
+                android:indeterminate="false" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/energy"
+                android:layout_weight="1"
+                android:text="活力：100"
+                android:textSize="10dp"
+                android:gravity="center_horizontal"/>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/speedup"
+                android:id="@+id/speedUp" />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/left"
+                android:id="@+id/left" />
+
+        </LinearLayout>
+
+        <com.example.tetris.TetrisView
+            android:id="@+id/tetrisView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="行数"
+                android:gravity="center"
+                android:textSize="20dp"
+                 />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="1"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:id="@+id/level" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="等级"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="1"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:id="@+id/speed" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rotate"
+                android:id="@+id/rotate" />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/right"
+                android:id="@+id/right"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:gravity="center">
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/start"
+
+            android:gravity="center_horizontal"
+            android:background="@drawable/start"/>
+    </LinearLayout>
+
+
+</LinearLayout>
